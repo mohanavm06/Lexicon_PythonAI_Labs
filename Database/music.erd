@@ -1,0 +1,383 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dineug/erd-editor/main/json-schema/schema.json",
+  "version": "3.0.0",
+  "settings": {
+    "originX": 0,
+    "originY": 0,
+    "zoomLevel": 0.7,
+    "show": 431,
+    "database": 32,
+    "databaseName": "Music School",
+    "canvasType": "ERD",
+    "language": 1,
+    "tableNameCase": 1,
+    "columnNameCase": 1,
+    "bracketType": 1,
+    "relationshipDataTypeSync": true,
+    "columnOrder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "maxWidthComment": 200,
+    "lockSettings": 63
+  },
+  "doc": {
+    "tableIds": [
+      "teachers",
+      "instruments",
+      "students",
+      "lessons",
+      "teacher_instruments",
+      "lesson_students"
+    ],
+    "relationshipIds": [
+      "rel_1",
+      "rel_2",
+      "rel_3",
+      "rel_4",
+      "rel_5",
+      "rel_6"
+    ]
+  },
+  "collections": {
+    "tableEntities": {
+      "instruments": {
+        "id": "instruments",
+        "name": "instruments",
+        "columnIds": [
+          "instruments.instrument_id",
+          "instruments.instrument_name",
+          "instruments.category"
+        ],
+        "ui": {
+          "x": 707.1429,
+          "y": 48.5716
+        }
+      },
+      "lesson_students": {
+        "id": "lesson_students",
+        "name": "lesson_students",
+        "columnIds": [
+          "lesson_students.lesson_id",
+          "lesson_students.student_id"
+        ],
+        "ui": {
+          "x": 1332.8571,
+          "y": 411.4286
+        }
+      },
+      "lessons": {
+        "id": "lessons",
+        "name": "lessons",
+        "columnIds": [
+          "lessons.lesson_id",
+          "lessons.teacher_id",
+          "lessons.instrument_id",
+          "lessons.lesson_date",
+          "lessons.lesson_time"
+        ],
+        "ui": {
+          "x": 721.4286,
+          "y": 400
+        }
+      },
+      "students": {
+        "id": "students",
+        "name": "students",
+        "columnIds": [
+          "students.student_id",
+          "students.first_name",
+          "students.last_name",
+          "students.email"
+        ],
+        "ui": {
+          "x": 1171.4286,
+          "y": 42.8571
+        }
+      },
+      "teacher_instruments": {
+        "id": "teacher_instruments",
+        "name": "teacher_instruments",
+        "columnIds": [
+          "teacher_instruments.teacher_id",
+          "teacher_instruments.instrument_id"
+        ],
+        "ui": {
+          "x": 40,
+          "y": 400
+        }
+      },
+      "teachers": {
+        "id": "teachers",
+        "name": "teachers",
+        "columnIds": [
+          "teachers.teacher_id",
+          "teachers.first_name",
+          "teachers.last_name",
+          "teachers.email"
+        ],
+        "ui": {
+          "x": 40,
+          "y": 60
+        }
+      }
+    },
+    "tableColumnEntities": {
+      "instruments.category": {
+        "id": "instruments.category",
+        "tableId": "instruments",
+        "name": "category",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "instruments.instrument_id": {
+        "id": "instruments.instrument_id",
+        "tableId": "instruments",
+        "name": "instrument_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "instruments.instrument_name": {
+        "id": "instruments.instrument_name",
+        "tableId": "instruments",
+        "name": "instrument_name",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "lesson_students.lesson_id": {
+        "id": "lesson_students.lesson_id",
+        "tableId": "lesson_students",
+        "name": "lesson_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "lesson_students.student_id": {
+        "id": "lesson_students.student_id",
+        "tableId": "lesson_students",
+        "name": "student_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "lessons.instrument_id": {
+        "id": "lessons.instrument_id",
+        "tableId": "lessons",
+        "name": "instrument_id",
+        "dataType": "INTEGER",
+        "options": 8
+      },
+      "lessons.lesson_date": {
+        "id": "lessons.lesson_date",
+        "tableId": "lessons",
+        "name": "lesson_date",
+        "dataType": "DATE",
+        "options": 0
+      },
+      "lessons.lesson_id": {
+        "id": "lessons.lesson_id",
+        "tableId": "lessons",
+        "name": "lesson_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "lessons.lesson_time": {
+        "id": "lessons.lesson_time",
+        "tableId": "lessons",
+        "name": "lesson_time",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "lessons.teacher_id": {
+        "id": "lessons.teacher_id",
+        "tableId": "lessons",
+        "name": "teacher_id",
+        "dataType": "INTEGER",
+        "options": 8
+      },
+      "students.email": {
+        "id": "students.email",
+        "tableId": "students",
+        "name": "email",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "students.first_name": {
+        "id": "students.first_name",
+        "tableId": "students",
+        "name": "first_name",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "students.last_name": {
+        "id": "students.last_name",
+        "tableId": "students",
+        "name": "last_name",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "students.student_id": {
+        "id": "students.student_id",
+        "tableId": "students",
+        "name": "student_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "teacher_instruments.instrument_id": {
+        "id": "teacher_instruments.instrument_id",
+        "tableId": "teacher_instruments",
+        "name": "instrument_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "teacher_instruments.teacher_id": {
+        "id": "teacher_instruments.teacher_id",
+        "tableId": "teacher_instruments",
+        "name": "teacher_id",
+        "dataType": "INTEGER",
+        "options": 10
+      },
+      "teachers.email": {
+        "id": "teachers.email",
+        "tableId": "teachers",
+        "name": "email",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "teachers.first_name": {
+        "id": "teachers.first_name",
+        "tableId": "teachers",
+        "name": "first_name",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "teachers.last_name": {
+        "id": "teachers.last_name",
+        "tableId": "teachers",
+        "name": "last_name",
+        "dataType": "TEXT",
+        "options": 0
+      },
+      "teachers.teacher_id": {
+        "id": "teachers.teacher_id",
+        "tableId": "teachers",
+        "name": "teacher_id",
+        "dataType": "INTEGER",
+        "options": 10
+      }
+    },
+    "relationshipEntities": {
+      "rel_1": {
+        "id": "rel_1",
+        "relationshipType": 4,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "teachers",
+          "columnIds": [
+            "teachers.teacher_id"
+          ]
+        },
+        "end": {
+          "tableId": "lessons",
+          "columnIds": [
+            "lessons.teacher_id"
+          ]
+        }
+      },
+      "rel_2": {
+        "id": "rel_2",
+        "relationshipType": 4,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "instruments",
+          "columnIds": [
+            "instruments.instrument_id"
+          ]
+        },
+        "end": {
+          "tableId": "lessons",
+          "columnIds": [
+            "lessons.instrument_id"
+          ]
+        }
+      },
+      "rel_3": {
+        "id": "rel_3",
+        "relationshipType": 4,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "teachers",
+          "columnIds": [
+            "teachers.teacher_id"
+          ]
+        },
+        "end": {
+          "tableId": "teacher_instruments",
+          "columnIds": [
+            "teacher_instruments.teacher_id"
+          ]
+        }
+      },
+      "rel_4": {
+        "id": "rel_4",
+        "relationshipType": 4,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "instruments",
+          "columnIds": [
+            "instruments.instrument_id"
+          ]
+        },
+        "end": {
+          "tableId": "teacher_instruments",
+          "columnIds": [
+            "teacher_instruments.instrument_id"
+          ]
+        }
+      },
+      "rel_5": {
+        "id": "rel_5",
+        "relationshipType": 4,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "students",
+          "columnIds": [
+            "students.student_id"
+          ]
+        },
+        "end": {
+          "tableId": "lesson_students",
+          "columnIds": [
+            "lesson_students.student_id"
+          ]
+        }
+      },
+      "rel_6": {
+        "id": "rel_6",
+        "relationshipType": 4,
+        "onDelete": 1,
+        "onUpdate": 1,
+        "start": {
+          "tableId": "lessons",
+          "columnIds": [
+            "lessons.lesson_id"
+          ]
+        },
+        "end": {
+          "tableId": "lesson_students",
+          "columnIds": [
+            "lesson_students.lesson_id"
+          ]
+        }
+      }
+    }
+  }
+}
